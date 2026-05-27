@@ -39,9 +39,11 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-[0.9]"
           >
-            UNLEASH YOUR
-            <br />
-            <span className="text-yellow-400">POTENTIAL</span>
+            
+            <span className="text-yellow-400">Love </span>
+            
+            is an <br /><span className="text-yellow-400">Action</span> Word
+            
           </motion.h1>
 
           <motion.p
@@ -50,7 +52,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto"
           >
-            Elite personal training designed to push your limits and achieve
+            Personal training designed to find your limits and push a little bit further to achieve
             results you never thought possible
           </motion.p>
 

@@ -7,40 +7,40 @@ const weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satur
 
 const scheduleData = {
   Monday: [
-    { time: "6:00 AM", class: "HIIT Bootcamp", instructor: "Sarah", spots: 12 },
-    { time: "9:00 AM", class: "Strength Training", instructor: "Marcus", spots: 8 },
-    { time: "5:30 PM", class: "CrossFit", instructor: "Sarah", spots: 15 },
-    { time: "7:00 PM", class: "Yoga Flow", instructor: "Emily", spots: 20 },
+    { time: "6:00 AM", class: "HIIT Bootcamp", instructor: "Boundary Fitness Center", spots: 12 },
+    { time: "9:00 AM", class: "Strength Training", instructor: "Boundary Aquatic Center", spots: 8 },
+    { time: "5:30 PM", class: "CrossFit", instructor: "Boundary Fitness Center", spots: 15 },
+    { time: "7:00 PM", class: "Yoga Flow", instructor: "Carrolton Gym", spots: 20 },
   ],
   Tuesday: [
-    { time: "6:00 AM", class: "Spin Class", instructor: "Marcus", spots: 18 },
-    { time: "12:00 PM", class: "Boxing", instructor: "Sarah", spots: 10 },
-    { time: "6:00 PM", class: "HIIT Cardio", instructor: "Emily", spots: 12 },
+    { time: "6:00 AM", class: "Spin Class", instructor: "Boundary Aquatic Center", spots: 18 },
+    { time: "12:00 PM", class: "Boxing", instructor: "Boundary Fitness Center", spots: 10 },
+    { time: "6:00 PM", class: "HIIT Cardio", instructor: "Carrolton Gym", spots: 12 },
   ],
   Wednesday: [
-    { time: "6:00 AM", class: "Bootcamp", instructor: "Sarah", spots: 12 },
-    { time: "9:00 AM", class: "Pilates", instructor: "Emily", spots: 15 },
-    { time: "5:30 PM", class: "Olympic Lifting", instructor: "Marcus", spots: 8 },
-    { time: "7:00 PM", class: "Mobility & Stretch", instructor: "Emily", spots: 20 },
+    { time: "6:00 AM", class: "Bootcamp", instructor: "Boundary Fitness Center", spots: 12 },
+    { time: "9:00 AM", class: "Pilates", instructor: "Carrolton Gym", spots: 15 },
+    { time: "5:30 PM", class: "Olympic Lifting", instructor: "Boundary Aquatic Center", spots: 8 },
+    { time: "7:00 PM", class: "Mobility & Stretch", instructor: "Carrolton Gym", spots: 20 },
   ],
   Thursday: [
-    { time: "6:00 AM", class: "Spin Class", instructor: "Marcus", spots: 18 },
-    { time: "12:00 PM", class: "Functional Training", instructor: "Sarah", spots: 12 },
-    { time: "6:00 PM", class: "HIIT Bootcamp", instructor: "Sarah", spots: 15 },
+    { time: "6:00 AM", class: "Spin Class", instructor: "Boundary Aquatic Center", spots: 18 },
+    { time: "12:00 PM", class: "Functional Training", instructor: "Boundary Fitness Center", spots: 12 },
+    { time: "6:00 PM", class: "HIIT Bootcamp", instructor: "Boundary Fitness Center", spots: 15 },
   ],
   Friday: [
-    { time: "6:00 AM", class: "Strength & Conditioning", instructor: "Marcus", spots: 10 },
-    { time: "9:00 AM", class: "Yoga Flow", instructor: "Emily", spots: 20 },
-    { time: "5:30 PM", class: "Friday Night Burn", instructor: "Sarah", spots: 15 },
+    { time: "6:00 AM", class: "Strength & Conditioning", instructor: "Boundary Aquatic Center", spots: 10 },
+    { time: "9:00 AM", class: "Yoga Flow", instructor: "Carrolton Gym", spots: 20 },
+    { time: "5:30 PM", class: "Friday Night Burn", instructor: "Boundary Fitness Center", spots: 15 },
   ],
   Saturday: [
-    { time: "8:00 AM", class: "Weekend Warrior", instructor: "Marcus", spots: 20 },
-    { time: "10:00 AM", class: "Yoga & Meditation", instructor: "Emily", spots: 25 },
+    { time: "8:00 AM", class: "Weekend Warrior", instructor: "Boundary Aquatic Center", spots: 20 },
+    { time: "10:00 AM", class: "Yoga & Meditation", instructor: "Carrolton Gym", spots: 25 },
     { time: "12:00 PM", class: "Open Gym", instructor: "All", spots: 30 },
   ],
   Sunday: [
-    { time: "9:00 AM", class: "Recovery Yoga", instructor: "Emily", spots: 20 },
-    { time: "11:00 AM", class: "Sunday Stretch", instructor: "Emily", spots: 15 },
+    { time: "9:00 AM", class: "Recovery Yoga", instructor: "Carrolton Gym", spots: 20 },
+    { time: "11:00 AM", class: "Sunday Stretch", instructor: "Carrolton Gym", spots: 15 },
   ],
 };
 
@@ -111,7 +111,7 @@ export function Schedule() {
                   <h3 className="text-2xl font-black tracking-tight group-hover:text-yellow-400 transition-colors">
                     {session.class}
                   </h3>
-                  <p className="text-gray-400 mt-1">with {session.instructor}</p>
+                  <p className="text-gray-400 mt-1">at {session.instructor}</p>
                 </div>
                 <motion.div
                   whileHover={{ rotate: 360 }}
@@ -144,7 +144,7 @@ export function Schedule() {
           ))}
         </div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -161,7 +161,7 @@ export function Schedule() {
           >
             Claim Free Class
           </motion.button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

@@ -58,7 +58,7 @@ export function About() {
           >
             <div className="relative aspect-[3/4] overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80"
+                src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/685079613_1555121839947684_1001290735895294678_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=UEQzyu_Uz5QQ7kNvwEma6lX&_nc_oc=AdoLOLhNlmQfcjTz1Z-MtfZG672DfIlcjImuTYnQEYVLoZrS5c6PlG1nWvDmkWmqK2E&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=RAmaSkYNjXXKRwo8b9bgaA&_nc_ss=7b2a8&oh=00_Af68kbrKrH2svqUh0xFe1OJo6TCnsdlgr6MWHiEj0EJWmA&oe=6A1D335C"
                 alt="Trainer"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />

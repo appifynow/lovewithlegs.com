@@ -48,25 +48,25 @@ export function CTA() {
 
               <div className="space-y-4">
                 <motion.a
-                  href="mailto:info@lovewithlegs.com"
+                  href="mailto:iamcoachclassic@gmail.com"
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-4 text-lg group"
                 >
                   <div className="w-12 h-12 bg-yellow-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail className="text-black" />
                   </div>
-                  <span>info@lovewithlegs.com</span>
+                  <span>iamcoachclassic@gmail.com</span>
                 </motion.a>
 
                 <motion.a
-                  href="tel:+1234567890"
+                  href="tel:+16462452820"
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-4 text-lg group"
                 >
                   <div className="w-12 h-12 bg-yellow-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Phone className="text-black" />
                   </div>
-                  <span>+1 (234) 567-890</span>
+                  <span>+1 (646)245-2820</span>
                 </motion.a>
 
                 <motion.div
@@ -76,7 +76,7 @@ export function CTA() {
                   <div className="w-12 h-12 bg-yellow-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <MapPin className="text-black" />
                   </div>
-                  <span>123 Fitness Ave, Los Angeles, CA</span>
+                  <span>Douglasville, Ga</span>
                 </motion.div>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Dumbbell, Users, Zap, TrendingUp } from "lucide-react";
+import { Dumbbell, Users, WavesHorizontal as Zap, TrendingUp } from "lucide-react";
 import { useInView } from "./hooks/useInView";
 
 const services = [
@@ -15,8 +15,8 @@ const services = [
   },
   {
     icon: Zap,
-    title: "HIIT Programs",
-    description: "Intense interval training for maximum fat burn and endurance",
+    title: "Pool Training",
+    description: "Low Impact aquatic workouts for strength, endurance, and recovery",
   },
   {
     icon: TrendingUp,
