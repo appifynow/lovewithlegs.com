@@ -5,6 +5,7 @@ import { About } from "./components/About";
 import { Testimonials } from "./components/Testimonials";
 import { CTA } from "./components/CTA";
 import { Navigation } from "./components/Navigation";
+import "./styles/index.css";
 
 export default function App() {
   return (

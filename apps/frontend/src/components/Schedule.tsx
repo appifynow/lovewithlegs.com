@@ -152,7 +152,7 @@ export function Schedule() {
         >
           <h3 className="text-2xl font-bold mb-3">First Class Free!</h3>
           <p className="text-gray-300 mb-6">
-            New to group training? Try any class for free and experience the APEXFIT difference.
+            New to group training? Try any class for just $12 and experience the Love with Legs difference.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}

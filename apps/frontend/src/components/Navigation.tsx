@@ -17,11 +17,11 @@ export function Navigation() {
           whileHover={{ scale: 1.05 }}
           className="text-2xl font-bold tracking-tighter"
         >
-          APEX<span className="text-yellow-400">FIT</span>
+          Love with <span className="text-yellow-400">Legs</span>
         </motion.div>
 
         <div className="hidden md:flex gap-8 items-center">
-          {["Services", "Schedule", "About", "Testimonials", "Contact"].map((item) => (
+          {["Personal Training", "Classes", "About", "Testimonials", "Contact"].map((item) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}

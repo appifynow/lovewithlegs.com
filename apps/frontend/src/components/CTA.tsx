@@ -48,14 +48,14 @@ export function CTA() {
 
               <div className="space-y-4">
                 <motion.a
-                  href="mailto:info@apexfit.com"
+                  href="mailto:info@lovewithlegs.com"
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-4 text-lg group"
                 >
                   <div className="w-12 h-12 bg-yellow-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail className="text-black" />
                   </div>
-                  <span>info@apexfit.com</span>
+                  <span>info@lovewithlegs.com</span>
                 </motion.a>
 
                 <motion.a
@@ -106,7 +106,7 @@ export function CTA() {
         className="text-center mt-20 relative z-10"
       >
         <p className="text-sm text-gray-300">
-          © 2026 APEXFIT. All rights reserved.
+          © 2026 lovewithlegs. All rights reserved.
         </p>
       </motion.div>
     </section>
