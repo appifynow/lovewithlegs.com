@@ -39,7 +39,7 @@ export function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <span className="text-yellow-400 uppercase tracking-[0.3em] text-sm font-bold">
+          <span className="text-brand uppercase tracking-[0.3em] text-sm font-bold">
             What We Offer
           </span>
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter mt-4">
@@ -60,7 +60,7 @@ export function Services() {
               <motion.div
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
-                className="w-16 h-16 bg-yellow-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                className="w-16 h-16 bg-brand flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
               >
                 <service.icon size={32} className="text-black" />
               </motion.div>

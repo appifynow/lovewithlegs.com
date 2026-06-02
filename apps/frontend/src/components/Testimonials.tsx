@@ -28,7 +28,7 @@ export function Testimonials() {
 
   return (
     <section id="testimonials" className="py-32 px-6 bg-zinc-900 relative overflow-hidden">
-      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-yellow-400/5 blur-[100px]" />
+      <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-brand/5 blur-[100px]" />
 
       <div className="max-w-7xl mx-auto relative z-10" ref={ref}>
         <motion.div
@@ -37,7 +37,7 @@ export function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <span className="text-yellow-400 uppercase tracking-[0.3em] text-sm font-bold">
+          <span className="text-brand uppercase tracking-[0.3em] text-sm font-bold">
             Success Stories
           </span>
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter mt-4">
@@ -60,7 +60,7 @@ export function Testimonials() {
                   <Star
                     key={i}
                     size={20}
-                    className="fill-yellow-400 text-yellow-400"
+                    className="fill-yellow-400 text-brand"
                   />
                 ))}
               </div>
@@ -82,7 +82,7 @@ export function Testimonials() {
                 </motion.div>
                 <div>
                   <div className="font-bold text-lg">{testimonial.name}</div>
-                  <div className="text-yellow-400 text-sm">
+                  <div className="text-brand text-sm">
                     {testimonial.role}
                   </div>
                 </div>

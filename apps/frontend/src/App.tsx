@@ -12,9 +12,9 @@ export default function App() {
     <div className="size-full bg-black text-white overflow-x-hidden">
       <Navigation />
       <Hero />
-      <Services />
       <Schedule />
       <About />
+      <Services />
       <Testimonials />
       <CTA />
     </div>

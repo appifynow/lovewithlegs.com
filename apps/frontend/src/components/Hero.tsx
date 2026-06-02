@@ -28,7 +28,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-6"
           >
-            <span className="text-yellow-400 uppercase tracking-[0.3em] text-sm font-bold">
+            <span className="text-brand uppercase tracking-[0.3em] text-sm font-bold">
               Transform Your Body
             </span>
           </motion.div>
@@ -40,9 +40,9 @@ export function Hero() {
             className="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-[0.9]"
           >
             
-            <span className="text-yellow-400">Love </span>
+            <span className="text-brand">Love </span>
             
-            is an <br /><span className="text-yellow-400">Action</span> Word
+            is an <br /><span className="text-brand">Action</span> Word
             
           </motion.h1>
 
@@ -65,7 +65,7 @@ export function Hero() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 bg-yellow-400 text-black font-bold uppercase tracking-wider text-lg flex items-center justify-center gap-2 group"
+              className="px-10 py-5 bg-brand text-black font-bold uppercase tracking-wider text-lg flex items-center justify-center gap-2 group"
             >
               Start Training
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />

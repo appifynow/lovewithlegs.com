@@ -4,7 +4,7 @@ import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 export function CTA() {
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500" />
+      <div className="absolute inset-0 bg-triadic" />
       <div className="absolute inset-0 bg-black/60" />
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -20,7 +20,7 @@ export function CTA() {
               <br />
               START YOUR
               <br />
-              <span className="text-yellow-400">JOURNEY?</span>
+              <span className="text-brand">JOURNEY?</span>
             </h2>
             <p className="text-2xl text-gray-200 mb-10">
               Don't wait another day. Your transformation starts now.
@@ -29,7 +29,7 @@ export function CTA() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-12 py-6 bg-yellow-400 text-black font-bold uppercase tracking-wider text-xl flex items-center gap-3 group"
+              className="px-12 py-6 bg-brand text-black font-bold uppercase tracking-wider text-xl flex items-center gap-3 group"
             >
               Book Free Consultation
               <ArrowRight className="group-hover:translate-x-2 transition-transform" />
@@ -52,7 +52,7 @@ export function CTA() {
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-4 text-lg group"
                 >
-                  <div className="w-12 h-12 bg-yellow-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-brand flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail className="text-black" />
                   </div>
                   <span>iamcoachclassic@gmail.com</span>
@@ -63,7 +63,7 @@ export function CTA() {
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-4 text-lg group"
                 >
-                  <div className="w-12 h-12 bg-yellow-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-brand flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Phone className="text-black" />
                   </div>
                   <span>+1 (646)245-2820</span>
@@ -73,7 +73,7 @@ export function CTA() {
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-4 text-lg group"
                 >
-                  <div className="w-12 h-12 bg-yellow-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-brand flex items-center justify-center group-hover:scale-110 transition-transform">
                     <MapPin className="text-black" />
                   </div>
                   <span>Douglasville, Ga</span>
@@ -86,11 +86,11 @@ export function CTA() {
               <div className="space-y-2 text-gray-300">
                 <div className="flex justify-between">
                   <span>Monday - Friday</span>
-                  <span className="text-yellow-400">6AM - 10PM</span>
+                  <span className="text-brand">6AM - 10PM</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Saturday - Sunday</span>
-                  <span className="text-yellow-400">8AM - 8PM</span>
+                  <span className="text-brand">8AM - 8PM</span>
                 </div>
               </div>
             </div>

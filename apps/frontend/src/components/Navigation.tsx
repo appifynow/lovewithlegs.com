@@ -13,12 +13,13 @@ export function Navigation() {
       className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <motion.div
+        <motion.a
+        href="#hero"
           whileHover={{ scale: 1.05 }}
           className="text-2xl font-bold tracking-tighter"
         >
-          Love with <span className="text-yellow-400">Legs</span>
-        </motion.div>
+          <img alt="Love with Legs Logo, return to top" style={{ height: "80px" }} src="https://res.cloudinary.com/dwzatjoyv/image/upload/Love_With_Legs_Logo_All_Colors-03_mikwms.jpg" alt="Love with Legs Logo" />
+        </motion.a>
 
         <div className="hidden md:flex gap-8 items-center">
           {["Personal Training", "Classes", "About", "Testimonials", "Contact"].map((item) => (
@@ -26,7 +27,7 @@ export function Navigation() {
               key={item}
               href={`#${item.toLowerCase()}`}
               whileHover={{ y: -2 }}
-              className="text-sm uppercase tracking-wider hover:text-yellow-400 transition-colors"
+              className="text-sm uppercase tracking-wider hover:text-brand transition-colors"
             >
               {item}
             </motion.a>
@@ -34,7 +35,7 @@ export function Navigation() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-2 bg-yellow-400 text-black font-bold uppercase tracking-wider"
+            className="px-6 py-2 bg-brand text-black font-bold uppercase tracking-wider"
           >
             Get Started
           </motion.button>
@@ -60,13 +61,13 @@ export function Navigation() {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-sm uppercase tracking-wider hover:text-yellow-400 transition-colors"
+                className="text-sm uppercase tracking-wider hover:text-brand transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item}
               </a>
             ))}
-            <button className="px-6 py-2 bg-yellow-400 text-black font-bold uppercase tracking-wider w-full">
+            <button className="px-6 py-2 bg-brand text-black font-bold uppercase tracking-wider w-full">
               Get Started
             </button>
           </div>

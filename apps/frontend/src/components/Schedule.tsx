@@ -59,7 +59,7 @@ export function Schedule() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-yellow-400 uppercase tracking-[0.3em] text-sm font-bold">
+          <span className="text-brand uppercase tracking-[0.3em] text-sm font-bold">
             Group Classes
           </span>
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter mt-4 mb-6">
@@ -87,7 +87,7 @@ export function Schedule() {
               onClick={() => setSelectedDay(day)}
               className={`px-6 py-3 font-bold uppercase tracking-wider transition-all ${
                 selectedDay === day
-                  ? "bg-yellow-400 text-black"
+                  ? "bg-brand text-black"
                   : "bg-white/5 text-white border border-white/10 hover:border-yellow-400"
               }`}
             >
@@ -108,7 +108,7 @@ export function Schedule() {
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h3 className="text-2xl font-black tracking-tight group-hover:text-yellow-400 transition-colors">
+                  <h3 className="text-2xl font-black tracking-tight group-hover:text-brand transition-colors">
                     {session.class}
                   </h3>
                   <p className="text-gray-400 mt-1">at {session.instructor}</p>
@@ -116,7 +116,7 @@ export function Schedule() {
                 <motion.div
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
-                  className="w-12 h-12 bg-yellow-400 flex items-center justify-center"
+                  className="w-12 h-12 bg-brand flex items-center justify-center"
                 >
                   <Calendar className="text-black" size={24} />
                 </motion.div>
@@ -124,11 +124,11 @@ export function Schedule() {
 
               <div className="flex items-center gap-6 text-sm">
                 <div className="flex items-center gap-2 text-gray-300">
-                  <Clock size={16} className="text-yellow-400" />
+                  <Clock size={16} className="text-brand" />
                   <span className="font-bold">{session.time}</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-300">
-                  <Users size={16} className="text-yellow-400" />
+                  <Users size={16} className="text-brand" />
                   <span>{session.spots} spots available</span>
                 </div>
               </div>
@@ -136,7 +136,7 @@ export function Schedule() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full mt-4 py-3 bg-yellow-400 text-black font-bold uppercase tracking-wider text-sm hover:bg-yellow-300 transition-colors"
+                className="w-full mt-4 py-3 bg-brand text-black font-bold uppercase tracking-wider text-sm hover:bg-brand-300 transition-colors"
               >
                 Reserve Spot
               </motion.button>
@@ -157,7 +157,7 @@ export function Schedule() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-yellow-400 text-black font-bold uppercase tracking-wider"
+            className="px-10 py-4 bg-brand text-black font-bold uppercase tracking-wider"
           >
             Claim Free Class
           </motion.button>
