@@ -1,4 +1,4 @@
-import { Navigate, useParams, useSearchParams } from "react-router";
+import { Navigate, useParams } from "react-router";
 
 export default function Events() {
     interface Event {
