@@ -3,53 +3,29 @@ import { Calendar, Clock, Users } from "lucide-react";
 import { useInView } from "./hooks/useInView";
 import { useState } from "react";
 
-const weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-const scheduleData = {
-  Monday: [
-    { time: "6:00 AM", class: "HIIT Bootcamp", instructor: "Boundary Fitness Center", spots: 12 },
-    { time: "9:00 AM", class: "Strength Training", instructor: "Boundary Aquatic Center", spots: 8 },
-    { time: "5:30 PM", class: "CrossFit", instructor: "Boundary Fitness Center", spots: 15 },
-    { time: "7:00 PM", class: "Yoga Flow", instructor: "Carrolton Gym", spots: 20 },
-  ],
+
+const classes = {
+  Monday: [],
   Tuesday: [
-    { time: "6:00 AM", class: "Spin Class", instructor: "Boundary Aquatic Center", spots: 18 },
-    { time: "12:00 PM", class: "Boxing", instructor: "Boundary Fitness Center", spots: 10 },
-    { time: "6:00 PM", class: "HIIT Cardio", instructor: "Carrolton Gym", spots: 12 },
+    { time: "9:00 AM", class: "Breath Sweat Stretch", instructor: "Boundary Fitness Center", spots: 20 },
+    { time: "11:00 PM", link: "/events/poolParty", class: "Pool Party Pump", instructor: "Boundary Waters Aquatic Center", spots: 10 },
   ],
   Wednesday: [
-    { time: "6:00 AM", class: "Bootcamp", instructor: "Boundary Fitness Center", spots: 12 },
-    { time: "9:00 AM", class: "Pilates", instructor: "Carrolton Gym", spots: 15 },
-    { time: "5:30 PM", class: "Olympic Lifting", instructor: "Boundary Aquatic Center", spots: 8 },
-    { time: "7:00 PM", class: "Mobility & Stretch", instructor: "Carrolton Gym", spots: 20 },
   ],
   Thursday: [
-    { time: "6:00 AM", class: "Spin Class", instructor: "Boundary Aquatic Center", spots: 18 },
-    { time: "12:00 PM", class: "Functional Training", instructor: "Boundary Fitness Center", spots: 12 },
-    { time: "6:00 PM", class: "HIIT Bootcamp", instructor: "Boundary Fitness Center", spots: 15 },
+    { time: "9:00 AM", class: "Breath Sweat Stretch", instructor: "Boundary Fitness Center", spots: 20 },
+     { time: "11:00 PM", link: "/events/poolParty", class: "Pool Party Pump", instructor: "Boundary Waters Aquatic Center", spots: 10 },
   ],
-  Friday: [
-    { time: "6:00 AM", class: "Strength & Conditioning", instructor: "Boundary Aquatic Center", spots: 10 },
-    { time: "9:00 AM", class: "Yoga Flow", instructor: "Carrolton Gym", spots: 20 },
-    { time: "5:30 PM", class: "Friday Night Burn", instructor: "Boundary Fitness Center", spots: 15 },
-  ],
-  Saturday: [
-    { time: "8:00 AM", class: "Weekend Warrior", instructor: "Boundary Aquatic Center", spots: 20 },
-    { time: "10:00 AM", class: "Yoga & Meditation", instructor: "Carrolton Gym", spots: 25 },
-    { time: "12:00 PM", class: "Open Gym", instructor: "All", spots: 30 },
-  ],
-  Sunday: [
-    { time: "9:00 AM", class: "Recovery Yoga", instructor: "Carrolton Gym", spots: 20 },
-    { time: "11:00 AM", class: "Sunday Stretch", instructor: "Carrolton Gym", spots: 15 },
-  ],
+  Friday:[],
 };
 
 export function Schedule() {
   const { ref, isInView } = useInView();
-  const [selectedDay, setSelectedDay] = useState("Monday");
+  const [selectedDay, setSelectedDay] = useState("Tuesday");
 
   return (
-    <section id="schedule" className="py-32 px-6 bg-black relative overflow-hidden">
+    <section id="classes" className="py-32 px-6 bg-black relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(250,204,21,0.05),transparent_50%)]" />
 
       <div className="max-w-7xl mx-auto relative z-10" ref={ref}>
@@ -76,16 +52,17 @@ export function Schedule() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap gap-2 justify-center mb-12"
         >
-          {weekDays.map((day, index) => (
+          {Object.keys(classes).map((day, index) => (
             <motion.button
               key={day}
+              disabled={classes[day as keyof typeof classes].length === 0}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.3 + index * 0.05 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedDay(day)}
-              className={`px-6 py-3 font-bold uppercase tracking-wider transition-all ${
+              className={`px-6 py-3 font-bold uppercase disabled:bg-gray-500 transition-all ${
                 selectedDay === day
                   ? "bg-brand text-black"
                   : "bg-white/5 text-white border border-white/10 hover:border-yellow-400"
@@ -97,7 +74,7 @@ export function Schedule() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-6">
-          {scheduleData[selectedDay as keyof typeof scheduleData].map((session, index) => (
+          {classes[selectedDay as keyof typeof classes].map((session, index) => (
             <motion.div
               key={`${session.time}-${session.class}`}
               initial={{ opacity: 0, x: -30 }}
