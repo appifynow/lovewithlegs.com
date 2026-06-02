@@ -15,7 +15,14 @@ export default function Events() {
             location: 'Boundary Waters Aquatic Center',
             description: "Dive into fitness with our Pool Party Pump! Join us every Thursday at 11 am for a refreshing aquatic workout that combines cardio, strength, and fun. Perfect for all fitness levels, this class will help you tone your muscles and boost your endurance while enjoying the water. Don't forget your swimsuit and towel!",
             fullAddress: "Boundary Waters Aquatic Center, 5000 highway 166,douglasville, GA"
-,        }
+,        },
+            fitnessYoga: {
+                title: 'Breath Sweat Stretch',
+                times: ['Tuesdays @ 9 am', 'Thursdays @ 9 am'],
+                location: 'Boundary Fitness Center',
+                description: "Experience the perfect blend of breath, sweat, and stretch with our Breath Sweat Stretch class! Join us every Tuesday and Thursday at 9 am for a dynamic workout that combines invigorating cardio, strength training, and deep stretching. This class is designed to boost your energy, improve flexibility, and leave you feeling refreshed. All fitness levels are welcome, so come ready to move and unwind!",
+                fullAddress: "Boundary Fitness Center, 5000 highway 166, douglasville, GA"
+            }
     }
     const { event } = useParams();
     if (!event || !events[event]) {

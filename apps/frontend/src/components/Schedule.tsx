@@ -8,13 +8,13 @@ import { useState } from "react";
 const classes = {
   Monday: [],
   Tuesday: [
-    { time: "9:00 AM", class: "Breath Sweat Stretch", instructor: "Boundary Fitness Center", spots: 20 },
+    { time: "9:00 AM",link: "/events/fitnessYoga", class: "Breath Sweat Stretch", instructor: "Boundary Fitness Center", spots: 20 },
     { time: "11:00 PM", link: "/events/poolParty", class: "Pool Party Pump", instructor: "Boundary Waters Aquatic Center", spots: 10 },
   ],
   Wednesday: [
   ],
   Thursday: [
-    { time: "9:00 AM", class: "Breath Sweat Stretch", instructor: "Boundary Fitness Center", spots: 20 },
+    { time: "9:00 AM", link: "/events/fitnessYoga", class: "Breath Sweat Stretch", instructor: "Boundary Fitness Center", spots: 20 },
      { time: "11:00 PM", link: "/events/poolParty", class: "Pool Party Pump", instructor: "Boundary Waters Aquatic Center", spots: 10 },
   ],
   Friday:[],
@@ -109,16 +109,27 @@ export function Schedule() {
                   <span>{session.spots} spots available</span>
                 </div>
               </div>
-
-              <motion.button
+            <div className="flex gap-4 mt-6">
+              <motion.a
+              href={session.link}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full mt-4 py-3 bg-brand text-black font-bold uppercase tracking-wider text-sm hover:bg-brand-300 transition-colors"
+                className=" mt-4 py-3 px-3 bg-brand text-black font-bold uppercase tracking-wider text-sm hover:bg-brand-300 transition-colors"
+              >
+                Learn More
+              </motion.a>
+              <motion.a 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className=" mt-4 py-3 px-3 bg-brand text-black font-bold uppercase tracking-wider text-sm hover:bg-brand-300 transition-colors"
               >
                 Reserve Spot
-              </motion.button>
+              </motion.a>
+              </div>
             </motion.div>
+            
           ))}
+          
         </div>
 
         {/* <motion.div
