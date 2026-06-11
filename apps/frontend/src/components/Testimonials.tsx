@@ -4,24 +4,67 @@ import { useInView } from "./hooks/useInView";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    role: "Lost 40 lbs",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
-    text: "This program changed my life. I've never felt stronger or more confident. The personalized approach made all the difference.",
+    "name": "Princess",
+    "text": "Coach Classics energy is amazing. This is my first time in class. I'm trying to get back in shape. This was a very good introduction. You have no choice but to have fun, smile and praise God. I love that aspect. I didn't come here thinking I was going to get that, so it was a great surprise. I'll be back.",
+    "image": "https://source.unsplash.com/featured/?fitness,energy"
   },
   {
-    name: "Marcus Johnson",
-    role: "Gained 20 lbs Muscle",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
-    text: "Finally found a trainer who understands what it takes to build real muscle. The results speak for themselves.",
+    "name": "Joy T",
+    "text": "I've been taking Coach Classics class since he started here and he saved my life. I wasn't taking my medicine for almost a year. I'm diabetic and I was super sick and didn't know it, but because I was exercising I'm still here. Thank you Coach!",
+    "image": "https://source.unsplash.com/featured/?health,wellness"
   },
   {
-    name: "Emily Chen",
-    role: "Marathon Runner",
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80",
-    text: "Improved my endurance by 300% and crushed my first marathon. The training methodology is scientifically sound and incredibly effective.",
+    "name": "Marquita",
+    "text": "The combination of movement while concentrating on breathing makes the class great for everyone.",
+    "image": "https://source.unsplash.com/featured/?breathing,stretch"
   },
-];
+  {
+    "name": "Inez",
+    "text": "Josh is so personal to everyone and encouraging. He makes you feel so good that you are trying to improve your mobility and physique. He smiles, encourages you to do more than you think you can, notices even small improvements, and genuinely cares.",
+    "image": "https://source.unsplash.com/featured/?motivation,coach"
+  },
+  {
+    "name": "Floyd R",
+    "text": "Joshua is the best instructor. He really works all parts of the body. You feel 100 percent better after his class. He will be missed on the Thursday morning class. Thank you for your energy and support.",
+    "image": "https://source.unsplash.com/featured/?workout,class"
+  },
+  {
+    "name": "Rita G",
+    "text": "So happy to discover these classes and enjoy them immensely.",
+    "image": "https://source.unsplash.com/featured/?happy,fitness"
+  },
+  {
+    "name": "Brad T",
+    "text": "I really love the energy Josh brings to classes. They feel like a celebration of life—challenging, but also life-affirming.",
+    "image": "https://source.unsplash.com/featured/?celebration,exercise"
+  },
+  {
+    "name": "Erma H",
+    "text": "After leaving class, I always feel energetic and inspired to continue practicing at home.",
+    "image": "https://source.unsplash.com/featured/?inspiration,exercise"
+  },
+  {
+    "name": "Yvette H",
+    "text": "Josh is a wonderful teacher and inspires everyone he meets.",
+    "image": "https://source.unsplash.com/featured/?teacher,inspiration"
+  },
+  {
+    "name": "Neila J",
+    "text": "Before starting Aqua Fit and Breathe and Stretch classes with Josh, I was short of breath, my knees were weak and I was completely off balance. I was constantly falling and unhappy with my health. Now I am stronger, breathing without an oxygen machine at night, and I haven't fallen in about a year. Thank God for my health and strength and Josh for motivating me to keep striving.",
+    "image": "https://source.unsplash.com/featured/?aquafit,stretch"
+  },
+  {
+    "name": "Gloria M",
+    "text": "Joshua is an excellent and fun fitness instructor. He makes the class very enjoyable. I love his enthusiasm!",
+    "image": "https://source.unsplash.com/featured/?fun,fitness"
+  },
+  {
+    "name": "Charmayne B",
+    "text": "I have truly enjoyed being in both the Breathe and Stretch class and the Aqua Fit class with Josh. His energy, warm heart, care, and enthusiasm bring me to class with purpose. Coach is a blessing to all in his classes, touching everyone spiritually and emotionally.",
+    "image": "https://source.unsplash.com/featured/?warmth,community"
+  }
+]
+;
 
 export function Testimonials() {
   const { ref, isInView } = useInView();
@@ -82,9 +125,6 @@ export function Testimonials() {
                 </motion.div>
                 <div>
                   <div className="font-bold text-lg">{testimonial.name}</div>
-                  <div className="text-brand text-sm">
-                    {testimonial.role}
-                  </div>
                 </div>
               </div>
             </motion.div>

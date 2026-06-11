@@ -13,7 +13,6 @@ export default defineConfig({
     tailwindcss(),
   ],
    define: {
-    VITE_baseURL: process.env.NODE_ENV === 'preview' ? '/lovewithlegs.com/' : '/',
     VITE_API_URL: process.env.VITE_API_URL 
   },
   resolve: {
