@@ -13,8 +13,7 @@ export default defineConfig({
     tailwindcss(),
   ],
    define: {
-    VITE_baseURL: JSON.stringify(process.env.NODE_ENV === 'preview' ? '/lovewithlegs.com/' : '/'),
-    VITE_API_URL: JSON.stringify(process.env.VITE_API_URL ?? 'api.test.com')
+    VITE_API_URL: process.env.VITE_API_URL 
   },
   resolve: {
     alias: {

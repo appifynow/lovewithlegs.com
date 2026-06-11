@@ -3,6 +3,7 @@ import { Services } from "../components/Services";
 import { Schedule } from "../components/Schedule";
 import { About } from "../components/About";
 import { Testimonials } from "../components/Testimonials";
+import { Footer } from "../components/Footer";
 import { CTA } from "../components/CTA";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <About />
       <Services />
       <Testimonials />
+      <Footer />
       <CTA />
     </main>
   );

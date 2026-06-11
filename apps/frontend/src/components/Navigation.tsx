@@ -18,7 +18,7 @@ export function Navigation() {
           <motion.img
             whileHover={{ scale: 1.05 }}
             style={{ height: "80px" }}
-            src="https://res.cloudinary.com/dwzatjoyv/image/upload/Love_With_Legs_Logo_All_Colors-03_mikwms.jpg"
+            src="https://res.cloudinary.com/dwzatjoyv/image/upload/v1780411530/Love_With_Legs_Logo_All_Colors-09_auo6cj.jpg"
             alt="Love with Legs Logo"
           />
         </Link>
@@ -27,7 +27,7 @@ export function Navigation() {
           {["Personal Training", "Classes", "About", "Testimonials", "Contact"].map((item) => (
             <motion.a
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={`/#${item.toLowerCase()}`}
               whileHover={{ y: -2 }}
               className="text-sm text-brand uppercase tracking-wider hover:text-white transition-colors"
             >
