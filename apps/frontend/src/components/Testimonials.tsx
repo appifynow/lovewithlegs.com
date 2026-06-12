@@ -103,7 +103,7 @@ export function Testimonials() {
                   <Star
                     key={i}
                     size={20}
-                    className="fill-brand text-yellow-400"
+                    className="fill-yellow-400 text-yellow-400"
                   />
                 ))}
               </div>
