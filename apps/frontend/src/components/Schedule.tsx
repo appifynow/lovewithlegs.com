@@ -35,11 +35,12 @@ export function Schedule() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-brand uppercase tracking-[0.3em] text-sm font-bold">
+          <span className="text-triadic uppercase tracking-[0.3em] text-sm font-bold">
             Group Classes
           </span>
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter mt-4 mb-6">
-            WEEKLY SCHEDULE
+            <span className="sr-only"> Group classes</span> {/* AT should read this subheading as Group classes Weekly Schedule*/}
+            WEEKLY SCHEDULE 
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Join our high-energy group sessions and train with like-minded athletes
@@ -114,14 +115,14 @@ export function Schedule() {
               href={session.link}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className=" mt-4 py-3 px-3 bg-brand text-black font-bold uppercase tracking-wider text-sm hover:bg-brand-300 transition-colors"
+                className=" mt-4 py-3 px-3 border-2 border-white text-white font-bold uppercase tracking-wider text-sm hover:bg-brand-300 transition-colors"
               >
                 Learn More
               </motion.a>
               <motion.a 
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className=" mt-4 py-3 px-3 bg-brand text-black font-bold uppercase tracking-wider text-sm hover:bg-brand-300 transition-colors"
+                className=" mt-4 py-3 px-3 border-2 border-white text-white font-bold uppercase tracking-wider text-sm hover:bg-brand-300 transition-colors"
               >
                 Reserve Spot
               </motion.a>

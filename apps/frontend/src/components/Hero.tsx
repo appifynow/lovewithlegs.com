@@ -28,8 +28,8 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-6"
           >
-            <span className="text-brand uppercase tracking-[0.3em] text-sm font-bold">
-              Transform Your Body
+            <span className="text-white uppercase tracking-[0.3em] text-sm font-bold">
+              Build your best Self Today
             </span>
           </motion.div>
 
@@ -65,7 +65,7 @@ export function Hero() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 bg-brand text-black font-bold uppercase tracking-wider text-lg flex items-center justify-center gap-2 group"
+              className="px-10 py-5 border-white border-2 text-white font-bold uppercase tracking-wider text-lg flex items-center justify-center gap-2 group"
             >
               Start Training
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />

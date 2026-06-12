@@ -86,6 +86,7 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-brand: #05dfe8;
+   --color-button: #2f00c7;
   --color-triadic: #3b05e8;
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);

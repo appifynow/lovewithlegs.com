@@ -20,8 +20,8 @@ export const CTA = () => {
             duration: 0.5,
             delay: 1,
         }}
-         className="sticky bottom-0 left-0 right-0 bg-brand text-black font-bold uppercase tracking-wider text-center py-4 z-50">
-        Are you looking to book new events at your venue? <a href="mailto:events@lovewithlegs.com" className="text-black underline">Contact us</a>
+         className="sticky bottom-0 left-0 right-0 bg-triadic text-white font-bold uppercase tracking-wider text-center py-4 z-50">
+        Are you looking to book new events at your venue? <a className="bold text-white hover:underline" href="mailto:events@lovewithlegs.com?subject=Book Coach Classic at My Venue">Contact us</a>
         </motion.div>
     );
 }

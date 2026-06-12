@@ -44,7 +44,7 @@ export function About() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-10 px-10 py-5 bg-brand text-black font-bold uppercase tracking-wider text-lg"
+              className="mt-10 px-10 text-white border-2 border-white hover:bg-brand py-5 text-black font-bold uppercase tracking-wider text-lg"
             >
               Book Consultation
             </motion.button>
@@ -74,8 +74,8 @@ export function About() {
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                   className="bg-white/5 border border-white/10 p-4 text-center backdrop-blur-sm"
                 >
-                  <stat.icon className="w-8 h-8 text-brand mx-auto mb-2" />
-                  <div className="text-3xl font-black text-brand">
+                  <stat.icon className="w-8 h-8 text-triadic mx-auto mb-2" />
+                  <div className="text-3xl font-black text-white">
                     {stat.value}
                   </div>
                   <div className="text-xs text-gray-400 uppercase tracking-wider mt-1">

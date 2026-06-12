@@ -14,7 +14,7 @@ export function Navigation() {
       className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="text-2xl text-brand font-bold tracking-tighter">
+        <Link to="/" className="text-2xl text-white font-bold tracking-tighter">
           <motion.img
             whileHover={{ scale: 1.05 }}
             style={{ height: "80px" }}
@@ -24,26 +24,20 @@ export function Navigation() {
         </Link>
 
         <div className="hidden md:flex gap-8 items-center">
-          {["Personal Training", "Classes", "About", "Testimonials", "Contact"].map((item) => (
+          {[ "Classes","Personal Training", "About", "Testimonials", "Contact"].map((item) => (
             <motion.a
               key={item}
               href={`/#${item.toLowerCase()}`}
               whileHover={{ y: -2 }}
-              className="text-sm text-brand uppercase tracking-wider hover:text-white transition-colors"
+              className="text-sm text-white uppercase tracking-wider hover:text-white transition-colors"
             >
               {item}
             </motion.a>
           ))}
-          <Link
-            to="/events"
-            className="text-sm text-white uppercase tracking-wider hover:text-brand transition-colors"
-          >
-            Events
-          </Link>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-2 bg-brand text-black font-bold uppercase tracking-wider"
+            className="px-6 py-2 bg-triadic text-white font-bold uppercase tracking-wider"
           >
             Get Started
           </motion.button>
@@ -69,13 +63,13 @@ export function Navigation() {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-sm uppercase tracking-wider hover:text-brand transition-colors"
+                className="text-sm uppercase tracking-wider hover:text-white transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item}
               </a>
             ))}
-            <button className="px-6 py-2 bg-brand text-black font-bold uppercase tracking-wider w-full">
+            <button className="px-6 py-2 bg-triadic text-white font-bold uppercase tracking-wider w-full">
               Get Started
             </button>
           </div>
