@@ -24,7 +24,7 @@ export function Navigation() {
         </Link>
 
         <div className="hidden md:flex gap-8 items-center">
-          {[ "Classes","Personal Training", "About", "Testimonials", "Contact"].map((item) => (
+          {[ "Classes", "About", "Testimonials", "Contact"].map((item) => (
             <motion.a
               key={item}
               href={`/#${item.toLowerCase()}`}
@@ -34,13 +34,14 @@ export function Navigation() {
               {item}
             </motion.a>
           ))}
-          <motion.button
+          <motion.a
+          href="/#classes"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-6 py-2 bg-triadic text-white font-bold uppercase tracking-wider"
           >
             Get Started
-          </motion.button>
+          </motion.a>
         </div>
 
         <button

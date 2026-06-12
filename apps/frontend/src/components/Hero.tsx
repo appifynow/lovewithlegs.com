@@ -62,21 +62,23 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <motion.button
+            <motion.a
+            href="/#classes"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 border-white border-2 text-white font-bold uppercase tracking-wider text-lg flex items-center justify-center gap-2 group"
+              className="px-10 py-5 border-white border-2 text-white font-bold uppercase tracking-wider text-lg flex items-center justify-center gap-2 group hover:bg-white hover:text-black transition-colors"
             >
               Start Training
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </motion.button>
-            <motion.button
+            </motion.a>
+            {/* <motion.a
+              href="/#schedule"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider text-lg hover:bg-white hover:text-black transition-colors"
             >
               View Programs
-            </motion.button>
+            </motion.a> */}
           </motion.div>
         </div>
       </div>
