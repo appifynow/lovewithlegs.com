@@ -35,7 +35,7 @@ export function Schedule() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-triadic uppercase tracking-[0.3em] text-sm font-bold">
+          <span className="subtitle uppercase tracking-[0.3em] text-sm font-bold">
             Group Classes
           </span>
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter mt-4 mb-6">

@@ -1,27 +1,33 @@
 import { motion } from "motion/react";
+import { useState } from "react";
 
-export const CTA = () => {
+export const CTA = ({ visible }: { visible: boolean })=> {
+    const [isHovered, setIsHovered] = useState(false);
     return (
         <motion.div
-        initial={{
-            height: "0px",
-            opacity: 0,
-        }}
-        exit={{
-            height: 0,
-            opacity: 0,
-        }}
-         animate="visible"
+        initial="hidden"
+        exit="hidden"
+        animate={visible ? [ "visible" ] : "hidden"}
         variants={{
-            hidden: { height: "0px", opacity: 0 },
-            visible: { height: "3%", opacity: 1 },
+            hidden: { bottom: -100, opacity: 0 },
+            visible: { bottom: 0, opacity: 1 },
+            enlarged: {
+                height: "30vh",
+                transition: { duration: 0.25, delay: 0 }
+            }
         }}
+        whileHover="enlarged"
         transition={{
             duration: 0.5,
-            delay: 1,
         }}
-         className="sticky bottom-0 left-0 right-0 bg-triadic text-white font-bold uppercase tracking-wider text-center py-4 z-50">
-        Are you looking to book new events at your venue? <a className="bold text-white hover:underline" href="mailto:events@lovewithlegs.com?subject=Book Coach Classic at My Venue">Contact us</a>
-        </motion.div>
+         onMouseEnter={() => setIsHovered(true)}
+         onMouseLeave={() => setIsHovered(false)}
+         className=" fixed w-full bg-triadic text-white font-bold  tracking-wider text-center py-4 z-50">
+        <span className="text-lg uppercase">Are you looking to book new events at your venue? </span>
+        <div className={` mt-10 mx-auto w-250 flex  flex-col ${isHovered ? '' : 'hidden'}`}>
+            <div className="text-lg flex-row">Coach Classic is the perfect solution for your next event. Contact Me Today to learn more!</div>
+            <a className="bold border-white border-2 mt-10 p-10 text-white hover:underline" href="mailto:events@lovewithlegs.com?subject=Book Coach Classic at My Venue">Contact us</a>
+        </div>
+       </motion.div>
     );
 }

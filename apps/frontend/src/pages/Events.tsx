@@ -47,6 +47,7 @@ export default function Events() {
     const videoId = eventData.video ? extractYouTubeId(eventData.video) : null;
   return (
     <main className="size-full min-h-screen bg-black text-white px-6 py-20">
+      <div className="max-w-3xl mx-auto my-12">
         {videoId ? (
           <iframe
             className="w-full h-96 object-cover opacity-40 mb-8"
@@ -68,9 +69,15 @@ export default function Events() {
         <p className="text-lg leading-8 text-slate-300">
           <strong>Description:</strong> {eventData.description}
         </p>
+        <div className="mt-8 flex gap-4">
+        <motion.a href="/" className="bg-triadic text-white px-6 py-3 rounded-lg mt-8 inline-block font-semibold tracking-wide hover:bg-brand/90 transition-colors duration-300">
+          Back 
+        </motion.a>
         <motion.a href="https://secure.rec1.com/GA/douglas-county-parks-recreation/catalog/index/e411fca80fdee6f46fe950c8b1088819?filter=c2VhcmNoPSZsb2NhdGlvbiU1QjE3ODA3JTVEPTEmZGF5c09mVGhlV2VlayU1QjElNUQ9MSZkYXlzT2ZUaGVXZWVrJTVCMyU1RD0x" className="bg-triadic text-white px-6 py-3 rounded-lg mt-8 inline-block font-semibold tracking-wide hover:bg-brand/90 transition-colors duration-300">
           Register 
         </motion.a>
+        </div>
+        </div>
         </div>
     </main>
   );

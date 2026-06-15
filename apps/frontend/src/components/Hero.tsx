@@ -1,9 +1,15 @@
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import { useRef } from "react";
+import { CTA } from "./CTA";
 
 export function Hero() {
+  const ref = useRef<HTMLDivElement>(null);
+  const  isInView  = useInView(ref, { once: false, initial: true });
+  console.log(isInView, 'hero is visible');
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section ref={ref} className="relative h-screen w-full overflow-hidden">
+      <CTA visible={!isInView} />
       <div className="absolute inset-0 z-0">
         <video
           autoPlay

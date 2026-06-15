@@ -118,7 +118,7 @@ export function Testimonials() {
                   className="w-16 h-16 rounded-full overflow-hidden border-2 border-yellow-400"
                 >
                   <img
-                    src={testimonial.image}
+                    src={`https://ui-avatars.com/api/?background=random&name=${testimonial.name}`}
                     alt={testimonial.name}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
