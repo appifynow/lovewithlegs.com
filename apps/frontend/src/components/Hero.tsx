@@ -58,8 +58,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto"
           >
-            Personal training designed to find your limits and push a little bit further to achieve
-            results you never thought possible
+            Love With Legs exists to put love into action through movement, empowering people to stay active through fitness, health and wellness.
           </motion.p>
 
           <motion.div

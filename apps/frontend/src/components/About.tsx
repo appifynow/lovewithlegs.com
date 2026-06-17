@@ -18,39 +18,6 @@ export function About() {
       <div className="max-w-7xl mx-auto relative z-10" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
-          >
-            <span className="text-brand uppercase tracking-[0.3em] text-sm font-bold">
-              About Me
-            </span>
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mt-4 mb-6">
-              YOUR FITNESS
-              <br />
-              <span className="text-brand">ARCHITECT</span>
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              I'm not just a trainer—I'm your partner in transformation. With over
-              15 years of experience, I've helped hundreds achieve their dream
-              physique and develop unshakeable confidence.
-            </p>
-            <p className="text-lg text-gray-400 leading-relaxed">
-              My approach combines science-backed training methods with
-              personalized nutrition strategies. No cookie-cutter programs—just
-              real results tailored to your unique body and goals.
-            </p>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-10 px-10 text-white border-2 border-white hover:bg-brand py-5 text-black font-bold uppercase tracking-wider text-lg"
-            >
-              Book Consultation
-            </motion.button>
-          </motion.div>
-
-          <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
@@ -85,6 +52,35 @@ export function About() {
               ))}
             </div>
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="text-brand uppercase tracking-[0.3em] text-sm font-bold">
+              About Me
+            </span>
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mt-4 mb-6">
+              YOUR FITNESS
+              <br />
+              <span className="text-brand">ARCHITECT</span>
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              With over 10 years of professional experience I have found my greatest joy, helping people move. My passion is making fitness fun, accessible, and empowering for everybody, regardless of age or fitness level. Whether we’re sweating through an energizing workout, splashing through a dynamic aqua routine or simply stretching and breathing together, my goal is simple; help you build strength, confidence, and joy through movement
+            </p>
+            <p className="text-lg text-gray-400 leading-relaxed">
+              I believe that “Love Is An Action Word”, and one of the greatest acts of self-love is taking care of your body. Every step, stretch, lift, and smile is an investment in a healthier, happier you. #LoveWithLegs
+            </p>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-10 px-10 text-white border-2 border-white hover:bg-brand py-5 text-black font-bold uppercase tracking-wider text-lg"
+            >
+              Book Consultation
+            </motion.button>
+          </motion.div>
+
         </div>
       </div>
     </section>

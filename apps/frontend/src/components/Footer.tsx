@@ -4,7 +4,7 @@ import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 export function Footer() {
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
-      <div className="absolute inset-0 bg-triadic" />
+      <div className="absolute inset-0 bg-slate-600" />
       <div className="absolute inset-0 bg-black/60" />
 
       <div className="max-w-7xl mx-auto relative z-10">

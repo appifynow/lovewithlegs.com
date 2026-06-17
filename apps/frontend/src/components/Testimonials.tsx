@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { Star } from "lucide-react";
 import { useInView } from "./hooks/useInView";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 const testimonials = [
   {
@@ -88,10 +90,14 @@ export function Testimonials() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <Swiper slidesPerView={3}
+        direction="horizontal"
+        loop
+        autoplay
+        spaceBetween={30} className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
+            <SwiperSlide key={testimonial.name}>
             <motion.div
-              key={testimonial.name}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.15 }}
@@ -128,8 +134,9 @@ export function Testimonials() {
                 </div>
               </div>
             </motion.div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );

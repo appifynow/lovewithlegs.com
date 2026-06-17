@@ -18,7 +18,7 @@ export function Navigation() {
           <motion.img
             whileHover={{ scale: 1.05 }}
             style={{ height: "80px" }}
-            src="https://res.cloudinary.com/dwzatjoyv/image/upload/v1780411530/Love_With_Legs_Logo_All_Colors-09_auo6cj.jpg"
+            src="https://res.cloudinary.com/dwzatjoyv/image/upload/v1781736892/white_logo_with_text_d3yjlm.png"
             alt="Love with Legs Logo"
           />
         </Link>
