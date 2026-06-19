@@ -64,14 +64,14 @@ export function Navigation() {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-sm uppercase tracking-wider hover:text-white transition-colors"
+                className="text-sm uppercase tracking-wider hover:text-brand text-white transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item}
               </a>
             ))}
             <button className="px-6 py-2 bg-triadic text-white font-bold uppercase tracking-wider w-full">
-              Get Started
+              Get Started!
             </button>
           </div>
         </motion.div>

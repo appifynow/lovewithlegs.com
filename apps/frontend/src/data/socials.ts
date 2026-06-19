@@ -1,0 +1,6 @@
+export const socials = [
+          { url: "https://www.facebook.com/lovewithlegs", network: "facebook" },
+          { url: 'https://l.facebook.com/l.php?u=https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Fphone%3D%252B16462452820%26token%3DeyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3ODE5ODM1NDEsInBob25lIjoiKzE2NDYyNDUyODIwIiwiY29udGV4dCI6IkFmaXVDQmEyd1lPc3NSdWtMa1hVY2RibWs3V1ZNUkJzTHd3OTFpN2hGSEZ3MlVGQW5YajRvVEo5dXp2QzY5czJpNEJrcEtsSl9MSEg4ZkphdzA2QjVzbHZzUU1rOTNfNmFJNEVWY0YtdE1MWkRpUFRhTXBBLW9UTEJhUVB4TnNicklQSEw2UzBuNDBXVXV0Tm5VWUtKSlVGTFEiLCJzb3VyY2UiOiJGQl9QYWdlIiwiYXBwIjoiZmFjZWJvb2siLCJlbnRyeV9wb2ludCI6InBhZ2VfY3RhIn0.yv9q1w_hCp6a-41RD0q9n5v5v5y7MUGXqe1bjoj32tDGJZolDv-JoWkVR7pqhNdqD2y5hHFjnsytD0WVO5Gc_w%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExcE9IRkNCaTRJT2g3MVhXSXNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5VMCAawVPn2v8IygHrU0yBLYMQVbh8CcU5AcJ9ITRN_TkPIAXZIEy8mw6vPw_aem_QnRQGTmOVxqBSK_hg1PxKg&h=AUCAC1VwQSH041Q5qKe8lbb9h5WVuBQIbHdRSGhYcw8--RGtrmw82mSmc_KZMLMXjqOPdzs52me_iVWteR2CeO7YvF8-2Y8Mn8xP4Tyn9Kbq8I1TaWTqNo2LqbMEfC9AawXciA', network: "whatsapp" },
+          { url: "https://www.instagram.com/lovewithlegs", network: "instagram" },
+          { url: "https://www.twitter.com/lovewithlegs", network: "twitter" }
+        ]

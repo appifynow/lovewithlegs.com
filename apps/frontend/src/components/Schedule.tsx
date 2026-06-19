@@ -40,7 +40,7 @@ export function Schedule() {
           </span>
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter mt-4 mb-6">
             <span className="sr-only"> Group classes</span> {/* AT should read this subheading as Group classes Weekly Schedule*/}
-            WEEKLY SCHEDULE 
+            WEEKLY CLASSES 
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Join our high-energy group sessions and train with like-minded athletes
@@ -53,7 +53,7 @@ export function Schedule() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap gap-2 justify-center mb-12"
         >
-          {Object.keys(classes).map((day, index) => (
+          {/* {Object.keys(classes).map((day, index) => (
             <motion.button
               key={day}
               disabled={classes[day as keyof typeof classes].length === 0}
@@ -65,13 +65,13 @@ export function Schedule() {
               onClick={() => setSelectedDay(day)}
               className={`px-6 py-3 font-bold uppercase disabled:bg-gray-500 transition-all ${
                 selectedDay === day
-                  ? "bg-brand text-black"
+                  ? "bg-brand text-white"
                   : "bg-white/5 text-white border border-white/10 hover:border-yellow-400"
               }`}
             >
               {day.slice(0, 3)}
             </motion.button>
-          ))}
+          ))} */}
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-6">
@@ -92,11 +92,11 @@ export function Schedule() {
                   <p className="text-gray-400 mt-1">at {session.instructor}</p>
                 </div>
                 <motion.div
-                  whileHover={{ rotate: 360 }}
+                  whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.6 }}
-                  className="w-12 h-12 bg-brand flex items-center justify-center"
+                  className=" w-12 h-12 bg-brand flex items-center justify-center"
                 >
-                  <Calendar className="text-black" size={24} />
+                  <Calendar className="text-white" size={24} />
                 </motion.div>
               </div>
 
@@ -115,14 +115,14 @@ export function Schedule() {
               href={session.link}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className=" mt-4 py-3 px-3 border-2 border-white text-white font-bold uppercase tracking-wider text-sm hover:bg-brand-300 transition-colors"
+                className=" mt-4 py-3 px-3 border-2 hover:bg-brand active:bg-active active:text-black border-white text-white font-bold uppercase tracking-wider text-sm hover:bg-brand-300 transition-colors"
               >
                 Learn More
               </motion.a>
               <motion.a 
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className=" mt-4 py-3 px-3 border-2 border-white text-white font-bold uppercase tracking-wider text-sm hover:bg-brand-300 transition-colors"
+                className=" mt-4 py-3 px-3 hover:bg-brand active:bg-active active:text-black border-2 border-white text-white font-bold uppercase tracking-wider text-sm hover:bg-brand-300 transition-colors"
               >
                 Reserve Spot
               </motion.a>
@@ -146,7 +146,7 @@ export function Schedule() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-brand text-black font-bold uppercase tracking-wider"
+            className="px-10 py-4 bg-brand text-white font-bold uppercase tracking-wider"
           >
             Claim Free Class
           </motion.button>

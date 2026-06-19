@@ -90,19 +90,19 @@ export function Testimonials() {
           </h2>
         </motion.div>
 
-        <Swiper slidesPerView={3}
+        <Swiper slidesPerView={window.innerWidth > 768 ? 3 : 1}
         direction="horizontal"
         loop
         autoplay
         spaceBetween={30} className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={testimonial.name}>
+            <SwiperSlide key={testimonial.name} className="h-full">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="bg-black border border-white/10 p-8 hover:border-yellow-400 transition-all group"
+              className="bg-black border h-full border-white/10 p-8 hover:border-yellow-400 transition-all group"
             >
               <div className="flex gap-1 mb-6">
                 {[...Array(5)].map((_, i) => (

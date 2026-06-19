@@ -62,7 +62,7 @@ export function Services() {
                 transition={{ duration: 0.6 }}
                 className="w-16 h-16 bg-brand flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
               >
-                <service.icon size={32} className="text-black" />
+                <service.icon size={32} className="text-white" />
               </motion.div>
               <h3 className="text-2xl font-bold mb-3 tracking-tight">
                 {service.title}

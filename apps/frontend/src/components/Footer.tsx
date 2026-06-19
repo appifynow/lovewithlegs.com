@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
+import { socials } from "../data/socials";
+import { Social } from "./Socials";
 
 export function Footer() {
   return (
@@ -29,7 +31,7 @@ export function Footer() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-12 py-6 bg-brand text-black font-bold uppercase tracking-wider text-xl flex items-center gap-3 group"
+              className="px-12 py-6 bg-brand text-white font-bold uppercase tracking-wider text-xl flex items-center gap-3 group"
             >
               Book Free Consultation
               <ArrowRight className="group-hover:translate-x-2 transition-transform" />
@@ -48,14 +50,14 @@ export function Footer() {
 
               <div className="space-y-4">
                 <motion.a
-                  href="mailto:iamcoachclassic@gmail.com"
+                  href="mailto:coachclassic@lovewithlegs.com"
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-4 text-lg group"
                 >
                   <div className="w-12 h-12 bg-brand flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Mail className="text-black" />
+                    <Mail className="text-white" />
                   </div>
-                  <span>iamcoachclassic@gmail.com</span>
+                  <span>coachclassic@lovewithlegs.com</span>
                 </motion.a>
 
                 <motion.a
@@ -64,9 +66,9 @@ export function Footer() {
                   className="flex items-center gap-4 text-lg group"
                 >
                   <div className="w-12 h-12 bg-brand flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Phone className="text-black" />
+                    <Phone className="text-white" />
                   </div>
-                  <span>+1 (646)245-2820</span>
+                  <span>+1 (646) 245-2820</span>
                 </motion.a>
 
                 <motion.div
@@ -74,10 +76,14 @@ export function Footer() {
                   className="flex items-center gap-4 text-lg group"
                 >
                   <div className="w-12 h-12 bg-brand flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <MapPin className="text-black" />
+                    <MapPin className="text-white" />
                   </div>
                   <span>Douglasville, Ga</span>
                 </motion.div>
+                <div>
+                <h4>Reach out on Social Media</h4>
+                <Social className="gap-4 my-4" socialMediaLink={socials} />
+                </div>
               </div>
             </div>
 

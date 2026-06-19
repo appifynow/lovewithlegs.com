@@ -2,6 +2,8 @@ import { motion, useInView } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { CTA } from "./CTA";
+import { Social } from './Socials';
+import { socials } from '../data/socials'
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -71,7 +73,7 @@ export function Hero() {
             href="/#classes"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 border-white border-2 text-white font-bold uppercase tracking-wider text-lg flex items-center justify-center gap-2 group hover:bg-white hover:text-black transition-colors"
+              className="px-10 py-5 border-white border-2 text-white hover:bg-brand active:bg-active active:text-black font-bold uppercase tracking-wider text-lg flex items-center justify-center gap-2 group transition-colors"
             >
               Start Training
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -80,7 +82,7 @@ export function Hero() {
               href="/#schedule"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider text-lg hover:bg-white hover:text-black transition-colors"
+              className="px-10 py-5 border-2 border-white text-white font-bold uppercase tracking-wider text-lg hover:bg-white hover:text-white transition-colors"
             >
               View Programs
             </motion.a> */}
@@ -97,6 +99,9 @@ export function Hero() {
           <div className="w-1 h-3 bg-white/50 rounded-full" />
         </div>
       </motion.div>
+      <div className="absolute flex flex-row bottom-8 right-8 z-10">
+        <Social transparent className="gap-4" socialMediaLink={socials} />
+      </div>
     </section>
   );
 }

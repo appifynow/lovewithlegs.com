@@ -75,7 +75,7 @@ export function About() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-10 px-10 text-white border-2 border-white hover:bg-brand py-5 text-black font-bold uppercase tracking-wider text-lg"
+              className="mt-10 px-10 text-white border-2 border-white hover:bg-brand active:bg-active active:text-black py-5 text-white font-bold uppercase tracking-wider text-lg"
             >
               Book Consultation
             </motion.button>
