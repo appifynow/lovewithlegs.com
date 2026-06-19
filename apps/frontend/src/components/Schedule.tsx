@@ -22,7 +22,7 @@ const classes = {
 
 export function Schedule() {
   const { ref, isInView } = useInView();
-  const [selectedDay, setSelectedDay] = useState("Tuesday");
+  const [selectedDay, _] = useState("Tuesday");
 
   return (
     <section id="classes" className="py-32 px-6 bg-black relative overflow-hidden">
