@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Navigate, useParams } from "react-router";
-import QRCode from "react-qr-code";
+// import QRCode from "react-qr-code";
 
 
 const extractYouTubeId = (url: string): string | null => {
