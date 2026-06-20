@@ -2,27 +2,12 @@ import { motion } from "motion/react";
 import { Calendar, Clock, Users } from "lucide-react";
 import { useInView } from "./hooks/useInView";
 import { useState } from "react";
-
-
-
-const classes = {
-  Monday: [],
-  Tuesday: [
-    { time: "9:00 AM",link: "/events/fitnessYoga", class: "Breath Sweat Stretch", instructor: "Boundary Fitness Center", spots: 20 },
-    { time: "11:00 PM", link: "/events/poolParty", class: "Pool Party Pump", instructor: "Boundary Waters Aquatic Center", spots: 10 },
-  ],
-  Wednesday: [
-  ],
-  Thursday: [
-    { time: "9:00 AM", link: "/events/fitnessYoga", class: "Breath Sweat Stretch", instructor: "Boundary Fitness Center", spots: 20 },
-     { time: "11:00 PM", link: "/events/poolParty", class: "Pool Party Pump", instructor: "Boundary Waters Aquatic Center", spots: 10 },
-  ],
-  Friday:[],
-};
+import {classes} from '../data/classes';
 
 export function Schedule() {
   const { ref, isInView } = useInView();
   const [selectedDay, _] = useState("Tuesday");
+  const boundaryMapLink = 'https://www.google.com/maps/place/Boundary+Waters+Activity+Center/@33.6675242,-84.666522,17z/data=!3m1!4b1!4m6!3m5!1s0x88f4df0120dcb53d:0x4bad8c314ce78ae6!8m2!3d33.6675242!4d-84.6639471!16s%2Fg%2F11syczxf1_?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D'
 
   return (
     <section id="classes" className="py-32 px-6 bg-black relative overflow-hidden">
@@ -89,7 +74,9 @@ export function Schedule() {
                   <h3 className="text-2xl font-black tracking-tight group-hover:text-brand transition-colors">
                     {session.class}
                   </h3>
-                  <p className="text-gray-400 mt-1">at {session.instructor}</p>
+                  <p className="text-gray-400 mt-1">{session.days} @ <a className="text-active hover:underline" href={boundaryMapLink} target="_blank" rel="noopener noreferrer">
+                    {session.location}
+                  </a></p>
                 </div>
                 <motion.div
                   whileHover={{ scale: 1.1 }}
@@ -119,12 +106,15 @@ export function Schedule() {
               >
                 Learn More
               </motion.a>
-              <motion.a 
+              <motion.a
+              href="https://secure.rec1.com/GA/douglas-county-parks-recreation/catalog/index/e411fca80fdee6f46fe950c8b1088819?filter=c2VhcmNoPSZsb2NhdGlvbiU1QjE3ODA3JTVEPTEmZGF5c09mVGhlV2VlayU1QjElNUQ9MSZkYXlzT2ZUaGVXZWVrJTVCMyU1RD0x" 
+              target="_blank"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className=" mt-4 py-3 px-3 hover:bg-brand active:bg-active active:text-black border-2 border-white text-white font-bold uppercase tracking-wider text-sm hover:bg-brand-300 transition-colors"
               >
                 Reserve Spot
+                <span className="sr-only"> (opens in a new tab)</span>
               </motion.a>
               </div>
             </motion.div>

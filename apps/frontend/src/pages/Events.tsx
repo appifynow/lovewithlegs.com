@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import { Navigate, useParams } from "react-router";
+import QRCode from "react-qr-code";
+
 
 const extractYouTubeId = (url: string): string | null => {
   const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/);
@@ -29,7 +31,7 @@ export default function Events() {
             ages: "18+"
         },
             fitnessYoga: {
-              video: '',
+              video: 'https://www.youtube.com/watch?v=R1J8z56CLAw&t=31s',
                 title: 'Breath Sweat Stretch',
                 times: ['Tuesdays @ 9 am', 'Thursdays @ 9 am'],
                 location: 'Boundary Fitness Center',
@@ -80,6 +82,9 @@ export default function Events() {
         </div>
         </div>
         </div>
+
+        {/* <QRCode style={{ height: '150px' }} className="mx-auto  absolute bottom-8 right-8" value=" https://secure.rec1.com/GA/douglas-county-parks-recreation/catalog/index/e411fca80fdee6f46fe950c8b1088819?filter=c2VhcmNoPSZsb2NhdGlvbiU1QjE3ODA3JTVEPTEmZGF5c09mVGhlV2VlayU1QjElNUQ9MSZkYXlzT2ZUaGVXZWVrJTVCMyU1RD0x"/> */}
+
     </main>
   );
 }
