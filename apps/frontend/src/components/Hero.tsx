@@ -21,7 +21,7 @@ export function Hero() {
           className="w-full h-full object-cover opacity-40"
         >
           <source
-            src="https://assets.mixkit.co/videos/23940/23940-720.mp4"
+            src="https://res.cloudinary.com/dwzatjoyv/video/upload/v1782182748/hero_kyveaa.mp4"
             type="video/mp4"
           />
         </video>

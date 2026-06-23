@@ -3,10 +3,10 @@ import { Navigate, useParams } from "react-router";
 // import QRCode from "react-qr-code";
 
 
-const extractYouTubeId = (url: string): string | null => {
-  const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/);
-  return match ? match[1] : null;
-};
+// const extractYouTubeId = (url: string): string | null => {
+//   const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/);
+//   return match ? match[1] : null;
+// };
 
 export default function Events() {
     interface Event {
@@ -21,7 +21,7 @@ export default function Events() {
     }
     const events: { [key: string]: Event } = {
         poolParty: {
-            video: 'https://www.youtube.com/watch?v=wrNNtKjwVc4',
+            video: 'https://res.cloudinary.com/dwzatjoyv/image/upload/v1780411533/You_Made_a_DIFFERENCE_-_3_ooib9j.png',
             title: "Pool Party Pump",
             times: ['Thursdays @ 11 am'],
             location: 'Boundary Waters Aquatic Center',
@@ -31,7 +31,7 @@ export default function Events() {
             ages: "18+"
         },
             fitnessYoga: {
-              video: 'https://www.youtube.com/watch?v=R1J8z56CLAw&t=31s',
+              video: 'https://res.cloudinary.com/dwzatjoyv/video/upload/v1782183938/excersie_demo_qvdxuv.mp4',
                 title: 'Breath Sweat Stretch',
                 times: ['Tuesdays @ 9 am', 'Thursdays @ 9 am'],
                 location: 'Boundary Fitness Center',
@@ -46,19 +46,16 @@ export default function Events() {
         return <Navigate replace to="/" />;
     }
     const eventData = events[event];
-    const videoId = eventData.video ? extractYouTubeId(eventData.video) : null;
+    // const videoId = eventData.video ? extractYouTubeId(eventData.video) : null;
   return (
     <main className="size-full min-h-screen bg-black text-white px-6 py-20">
       <div className="max-w-3xl mx-auto my-12">
-        {videoId ? (
-          <iframe
-            className="w-full h-96 object-cover opacity-40 mb-8"
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&mute=1&loop=1`}
-            title={eventData.title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        ) : null}
+        {eventData.video.endsWith('.mp4') ? (
+          <video className="w-full h-auto aspect-video m-4" autoPlay loop muted playsInline>
+            <source src={eventData.video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : <img src={eventData.video} alt={eventData.title} className="w-full h-auto aspect-video m-4" />}
         <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold tracking-tight mb-6">{eventData.title}</h1>
         <p className="text-lg leading-8 text-slate-300 mb-4">
