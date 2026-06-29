@@ -21,7 +21,7 @@ export default function Events() {
     }
     const events: { [key: string]: Event } = {
         poolParty: {
-            video: 'https://res.cloudinary.com/dwzatjoyv/image/upload/v1780411533/You_Made_a_DIFFERENCE_-_3_ooib9j.png',
+            video: 'https://res.cloudinary.com/dwzatjoyv/video/upload/v1782775816/poolpumpedit_nrtvb1.mp4',
             title: "Pool Party Pump",
             times: ['Thursdays @ 11 am'],
             location: 'Boundary Waters Aquatic Center',

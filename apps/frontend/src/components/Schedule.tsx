@@ -6,7 +6,7 @@ import {classes} from '../data/classes';
 
 export function Schedule() {
   const { ref, isInView } = useInView();
-  const [selectedDay, _] = useState("Tuesday");
+  const [selectedDay, _] = useState("Thursday");
   const boundaryMapLink = 'https://www.google.com/maps/place/Boundary+Waters+Activity+Center/@33.6675242,-84.666522,17z/data=!3m1!4b1!4m6!3m5!1s0x88f4df0120dcb53d:0x4bad8c314ce78ae6!8m2!3d33.6675242!4d-84.6639471!16s%2Fg%2F11syczxf1_?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D'
 
   return (
