@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowRight, Mail, Phone, MapPin, ClipboardPlus } from "lucide-react";
 import { socials } from "../data/socials";
 import { Social } from "./Socials";
 
@@ -49,10 +49,17 @@ export function Footer() {
               <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
 
               <div className="space-y-4">
+                
+                 <motion.a  className=" hover:underline flex items-center gap-4 text-lg group" href="https://dmkgnqzl.forms.app/lovewithlegssurvey" target="_blank" rel="noopener noreferrer">
+                  <div className="w-12 h-12 bg-brand flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <ClipboardPlus />
+                  </div>
+                  <span>Tell us What you think</span>
+      </motion.a>
                 <motion.a
                   href="mailto:coachclassic@lovewithlegs.com"
                   whileHover={{ x: 5 }}
-                  className="flex items-center gap-4 text-lg group"
+                  className="flex hover:underline items-center gap-4 text-lg group"
                 >
                   <div className="w-12 h-12 bg-brand flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail className="text-white" />
@@ -63,7 +70,7 @@ export function Footer() {
                 <motion.a
                   href="tel:+16462452820"
                   whileHover={{ x: 5 }}
-                  className="flex items-center gap-4 text-lg group"
+                  className="flex hover:underline items-center gap-4 text-lg group"
                 >
                   <div className="w-12 h-12 bg-brand flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Phone className="text-white" />
